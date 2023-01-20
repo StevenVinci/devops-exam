@@ -23,5 +23,9 @@ describe("validations tests suites - isTagValid", () => {
         const result = isTagValid("abcefgijkl$1");
         expect(result).toBe(true);
     });
+    test("should return false as a tag with a length < 8 is provided", () => {
+        const result = isTagValid("salut");
+        expect(result).toBe(false);
+    });
 });
 // TODO: Create tests suite for validation function
